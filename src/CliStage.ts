@@ -29,15 +29,13 @@ export class CliStage {
   success(final: boolean = false) {
     try {
       this.stop('success', final)
-    } catch (e) {
-    }
+    } catch (e) {}
   }
 
   error(final: boolean = false) {
     try {
       this.stop('error', final)
-    } catch (e) {
-    }
+    } catch (e) {}
   }
 
   private stop(result: 'error' | 'success', final: boolean) {
@@ -50,7 +48,9 @@ export class CliStage {
           `${chalk.green(figures.tick)} ${this.currentStage}\n`
         )
       } else {
-        process.stdout.write(`${chalk.red(figures.cross)} ${this.currentStage}\n`)
+        process.stdout.write(
+          `${chalk.red(figures.cross)} ${this.currentStage}\n`
+        )
       }
       if (final) {
         this.final = true

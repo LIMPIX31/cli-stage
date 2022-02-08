@@ -4,6 +4,7 @@
   "description": "CLI tool for visualizing stages",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
+  "repository": "https://github.com/LIMPIX31/cli-stage.git",
   "files": [
     "lib/**/*"
   ],
@@ -21,6 +22,10 @@
     "cli",
     "terminal"
   ],
+  "bugs": {
+    "url": "https://github.com/LIMPIX31/cli-stage/issues"
+  },
+  "homepage": "https://github.com/LIMPIX31/cli-stage#readme",
   "author": "LIMPIX31",
   "license": "MIT",
   "dependencies": {

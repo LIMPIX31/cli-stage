@@ -12,9 +12,9 @@ export class CliStage {
 
   private spinner: Spinner = new Spinner({
     stream: process.stdout,
-    onTick: function(msg) {
+    onTick: function (msg) {
       this.stream.write('\x1b[?25l' + msg + '\r')
-    }
+    },
   })
 
   constructor(...stages: string[]) {

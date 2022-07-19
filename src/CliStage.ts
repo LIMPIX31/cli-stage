@@ -10,7 +10,12 @@ export class CliStage {
   private readonly stages: string[]
   private final: boolean = false
 
-  private spinner: Spinner = new Spinner()
+  private spinner: Spinner = new Spinner({
+    stream: process.stdout,
+    onTick: function(msg) {
+      this.stream.write('\x1b[?25l' + msg + '\r')
+    }
+  })
 
   constructor(...stages: string[]) {
     if (stages.length === 0)
